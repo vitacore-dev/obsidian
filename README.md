@@ -19,3 +19,17 @@ Shared technical support knowledge base managed through GitHub pull requests.
 3. Update notes in Obsidian
 4. Open PR to `main`
 
+## Daily Workflow
+
+1. Start of task:
+   - `git checkout main`
+   - `git pull --rebase`
+   - `git checkout -b kb/add-<topic>` (or `kb/fix-<topic>`)
+2. During task:
+   - update notes in Obsidian
+   - run commit from Obsidian Git plugin or terminal
+3. End of task:
+   - `git push -u origin <branch>`
+   - open PR and request review
+   - after merge, switch back to `main` and pull latest changes
+
