@@ -12,8 +12,8 @@ tags: [runbook]
 
 ## Scope
 
-- Product/version:
-- Environment:
+- Версия продукта:
+- Окружение:
 
 ## Diagnosis
 
@@ -29,12 +29,12 @@ tags: [runbook]
 
 ## Escalation
 
-Escalate if:
+Эскалировать, если:
 
 - 
 
-Escalate to:
+Куда эскалировать:
 
-- Team:
-- Channel:
+- Команда:
+- Канал:
 

@@ -1,47 +1,55 @@
-# Contributing to Support Knowledge Base
+# Правила работы с базой знаний техподдержки
 
-This repository stores the shared Obsidian knowledge base for technical support.
+Этот репозиторий хранит общую Obsidian-базу знаний для команды технической поддержки.
 
-## Goal
+## Цель
 
-Keep troubleshooting knowledge searchable, current, and safe to use during live ticket handling.
+Поддерживать знания по диагностике и решениям в актуальном, структурированном и безопасном для публикации виде.
 
-## Before You Start
+## Новым сотрудникам
 
-1. Update local main branch:
+Если вы подключаетесь к команде, сначала пройдите:
+
+- `06_Onboarding/Onboarding Checklist.md`
+
+## Перед началом работы
+
+1. Синхронизировать локальную `main`:
    - `git checkout main`
    - `git pull --rebase`
-2. Create a branch:
-   - New article: `kb/add-<topic>`
-   - Fix/update: `kb/fix-<topic>`
-3. Do not commit sensitive data:
-   - customer PII
-   - tokens/passwords
-   - internal secrets
+2. Создать рабочую ветку:
+   - новая статья: `kb/add-<topic>`
+   - исправление/обновление: `kb/fix-<topic>`
+3. Не коммитить чувствительные данные:
+   - персональные данные клиентов (PII)
+   - токены/пароли
+   - внутренние секреты и ключи
 
-## Folder Map
+## Карта разделов
 
-- `01_Runbooks` - step-by-step troubleshooting and recovery instructions
-- `02_Known-Issues` - known problems and workarounds
-- `03_Product-FAQ` - frequent customer-facing questions
-- `04_Integrations` - integration setup, limits, caveats
-- `05_Incidents-Postmortem` - incident analysis and lessons learned
-- `06_Onboarding` - onboarding material for support engineers
-- `90_Templates` - note templates
+- `01_Runbooks` - пошаговые инструкции диагностики и восстановления
+- `02_Known-Issues` - известные проблемы и обходные решения
+- `03_Product-FAQ` - частые вопросы и готовые ответы
+- `04_Integrations` - настройки интеграций, ограничения, особенности
+- `05_Incidents-Postmortem` - разборы инцидентов и выводы
+- `06_Onboarding` - материалы для адаптации сотрудников
+- `90_Templates` - шаблоны заметок
 
-## Required Note Format
+## Требования к заметкам
 
-Every operational note must contain:
+Каждая операционная заметка должна содержать:
 
-- **Symptoms** - what user/support sees
-- **Scope** - product versions / environments affected
-- **Diagnosis** - checks and validation steps
-- **Resolution / Workaround** - exact actions
-- **Escalation** - when and where to escalate
-- **Owner** - team/person responsible
-- **Last Updated** - date in `YYYY-MM-DD`
+- **Symptoms** - что видит клиент/поддержка
+- **Scope** - версии продукта и окружения, где проявляется проблема
+- **Diagnosis** - шаги проверки и подтверждения
+- **Resolution / Workaround** - точные действия для решения
+- **Escalation** - когда и куда эскалировать
+- **Owner** - ответственная команда/человек
+- **Last Updated** - дата в формате `YYYY-MM-DD`
 
-Example frontmatter:
+Примечание: заголовки секций (`Symptoms`, `Scope` и т.д.) намеренно сохраняются на английском, так как их проверяет автоматический валидатор в CI.
+
+Пример frontmatter:
 
 ```yaml
 ---
@@ -53,30 +61,30 @@ tags: [runbook, auth, sso]
 ---
 ```
 
-## Pull Request Flow
+## Процесс Pull Request
 
-1. `git pull --rebase` before finalizing
-2. Commit with clear message (`kb: add runbook for SSO timeout`)
-3. Push branch
-4. Open PR to `main`
-5. Pass checks and get approvals
-6. Merge
+1. Перед завершением работы выполнить `git pull --rebase`
+2. Сделать commit с понятным сообщением (например, `kb: add runbook for SSO timeout`)
+3. Запушить ветку
+4. Открыть PR в `main`
+5. Пройти автоматические проверки и ревью
+6. Выполнить merge
 
-## PR Lanes
+## Режимы ревью
 
-- **Fast lane** (small fixes: typo/link/minor clarification):
-  - 1 reviewer
-  - target response under 4 business hours
-- **Standard lane** (new runbook, process change, critical logic):
-  - 2 reviewers or 1 reviewer + area owner
+- **Fast lane** (небольшие изменения: опечатки, ссылки, уточнения):
+  - 1 ревьюер
+  - целевое время ответа — до 4 рабочих часов
+- **Standard lane** (новый runbook, изменения процесса, критичный контент):
+  - 2 ревьюера или 1 ревьюер + владелец направления
 
-## Definition of Done
+## Критерии готовности (Definition of Done)
 
-A PR is done when:
+PR считается завершенным, если:
 
-- content is accurate and actionable
-- internal links resolve
-- owner and update date are present
-- no sensitive data is included
-- rollback or escalation path is clear (for runbooks)
+- контент корректный и применимый в работе;
+- внутренние ссылки валидны;
+- поля owner и дата обновления заполнены;
+- чувствительные данные не добавлены;
+- для runbook указан понятный путь эскалации (и при необходимости rollback).
 

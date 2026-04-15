@@ -8,15 +8,15 @@ tags: [known-issue]
 
 ## Issue Summary
 
--
+- 
 
 ## Symptoms
 
--
+- 
 
 ## Root Cause
 
--
+- 
 
 ## Workaround
 
@@ -25,12 +25,12 @@ tags: [known-issue]
 
 ## Permanent Fix Status
 
-- [ ] Planned
-- [ ] In progress
-- [ ] Released
+- [ ] Запланирован
+- [ ] В работе
+- [ ] Выпущен
 
 ## References
 
-- Ticket:
-- Incident:
+- Тикет:
+- Инцидент:
 
