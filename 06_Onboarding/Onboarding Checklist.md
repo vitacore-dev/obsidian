@@ -29,6 +29,7 @@ tags: [onboarding, knowledge-base, support]
 - Прочитать `README.md`.
 - Прочитать `CONTRIBUTING.md`.
 - Прочитать `docs/PROJECT_OVERVIEW.md`.
+- Пройти `06_Onboarding/Инструкция: подключение нового Obsidian-инстанса.md`.
 - Изучить структуру каталогов:
   - `01_Runbooks`
   - `02_Known-Issues`
