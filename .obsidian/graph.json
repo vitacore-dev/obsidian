@@ -1,0 +1,51 @@
+{
+  "collapse-filter": true,
+  "search": "-path:\"90_Templates\" -path:\"06_Onboarding\"",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": false,
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "query": "path:\"01_Runbooks\"",
+      "color": {
+        "a": 1,
+        "rgb": 15496862
+      }
+    },
+    {
+      "query": "path:\"02_Known-Issues\"",
+      "color": {
+        "a": 1,
+        "rgb": 16763904
+      }
+    },
+    {
+      "query": "path:\"03_Product-FAQ\"",
+      "color": {
+        "a": 1,
+        "rgb": 8847615
+      }
+    },
+    {
+      "query": "path:\"04_Integrations\"",
+      "color": {
+        "a": 1,
+        "rgb": 10855845
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": true,
+  "textFadeMultiplier": 0.2,
+  "nodeSizeMultiplier": 1.1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": true,
+  "centerStrength": 0.45,
+  "repelStrength": 12,
+  "linkStrength": 1,
+  "linkDistance": 210,
+  "scale": 0.9897782314758568,
+  "close": false
+}
