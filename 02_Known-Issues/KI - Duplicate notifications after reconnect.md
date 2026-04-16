@@ -1,5 +1,5 @@
 ---
-title: "Duplicate notifications after reconnect"
+title: "Дублирующиеся уведомления после reconnect"
 owner: "support-l2"
 last_updated: "2026-04-15"
 product_version: "2.6.1 - 2.6.3"
@@ -8,34 +8,34 @@ tags: [known-issue, notifications, websocket]
 
 ## Issue Summary
 
-Some users receive duplicate in-app notifications after temporary network reconnect.
+Часть пользователей получает дублирующиеся in-app уведомления после кратковременного восстановления сети.
 
 ## Symptoms
 
-- Same notification appears 2-3 times in UI.
-- Browser console may show repeated websocket subscription events.
-- Most common after VPN reconnect or laptop wake-up.
+- Одно и то же уведомление отображается 2-3 раза в UI.
+- В консоли браузера могут повторяться события websocket-подписки.
+- Чаще всего возникает после переподключения VPN или пробуждения ноутбука.
 
 ## Root Cause
 
-Client reconnect handler in versions `2.6.1-2.6.3` may register duplicate subscriptions before stale channel cleanup completes.
+В версиях `2.6.1-2.6.3` клиентский reconnect-handler может зарегистрировать дублирующиеся подписки до завершения очистки устаревшего канала.
 
 ## Workaround
 
-1. Ask user to hard refresh browser tab once.
-2. If issue repeats, ask user to log out and log in.
-3. For high-impact teams, disable real-time notifications in user preferences and use email channel until patch rollout.
+1. Попросить пользователя один раз сделать hard refresh вкладки браузера.
+2. Если проблема повторяется, попросить пользователя выйти и снова войти в систему.
+3. Для команд с высоким влиянием временно отключить real-time уведомления в настройках пользователя и использовать email-канал до выката патча.
 
 ## Permanent Fix Status
 
-- [ ] Planned
-- [x] In progress
-- [ ] Released
+- [ ] Запланирован
+- [x] В работе
+- [ ] Выпущен
 
-Target fix version: `2.6.4`
+Целевая версия исправления: `2.6.4`
 
 ## References
 
-- Ticket: `SUP-1842`
-- Incident: `INC-2026-04-11-NOTIFY`
+- Тикет: `SUP-1842`
+- Инцидент: `INC-2026-04-11-NOTIFY`
 

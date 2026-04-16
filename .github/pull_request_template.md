@@ -1,36 +1,36 @@
-## What changed
+## Что изменено
 
-- [ ] New article
-- [ ] Update existing article
-- [ ] Fix broken links/formatting
-- [ ] Process/policy change
+- [ ] Новая статья
+- [ ] Обновление существующей статьи
+- [ ] Исправление ссылок/форматирования
+- [ ] Изменение процесса/регламента
 
-Briefly describe the change and why it is needed.
+Кратко опишите, что изменено и зачем это нужно.
 
-## Knowledge type
+## Тип знания
 
 - [ ] Runbook
-- [ ] Known issue
+- [ ] Known issue (известная проблема)
 - [ ] Product FAQ
-- [ ] Integration note
+- [ ] Integration note (интеграция)
 - [ ] Incident postmortem
 - [ ] Onboarding material
 
-## Validation checklist
+## Чеклист валидации
 
-- [ ] I verified all internal links
-- [ ] I added/updated `owner`
-- [ ] I updated `last_updated`
-- [ ] I confirmed version/scope info is present
-- [ ] I removed customer-sensitive data
-- [ ] I described escalation conditions (if applicable)
+- [ ] Проверил(а) все внутренние ссылки
+- [ ] Добавил(а)/обновил(а) `owner`
+- [ ] Обновил(а) `last_updated`
+- [ ] Указал(а) версию/охват (scope)
+- [ ] Удалил(а) чувствительные клиентские данные
+- [ ] Описал(а) условия эскалации (если применимо)
 
-## Review lane
+## Режим ревью
 
-- [ ] Fast lane (minor edit)
-- [ ] Standard lane (new or critical content)
+- [ ] Fast lane (небольшое изменение)
+- [ ] Standard lane (новый или критичный контент)
 
-## Related ticket/incident
+## Связанный тикет/инцидент
 
-Add ticket IDs, incident IDs, or links if available.
+Добавьте ID тикетов, ID инцидентов или ссылки (если есть).
 

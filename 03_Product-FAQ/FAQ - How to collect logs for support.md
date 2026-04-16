@@ -1,5 +1,5 @@
 ---
-title: "How to collect logs for support"
+title: "Как собрать логи для технической поддержки"
 owner: "support-l1"
 last_updated: "2026-04-15"
 product_version: "all"
@@ -8,30 +8,30 @@ tags: [faq, logs, diagnostics]
 
 ## Question
 
-How can I collect logs required by technical support?
+Как собрать логи, необходимые технической поддержке?
 
 ## Short Answer
 
-Use the built-in diagnostics export from the admin panel and share the generated archive via secure support upload link.
+Используйте встроенный экспорт диагностики в админ-панели и передайте архив через защищенную ссылку загрузки из тикета поддержки.
 
 ## Steps for Customer
 
-1. Open **Admin Console -> Diagnostics -> Export Logs**.
-2. Select time range that includes the issue (recommended: last 2 hours).
-3. Reproduce the problem once if possible.
-4. Click **Generate Archive** and wait for completion.
-5. Upload the archive using the secure link from your support ticket.
+1. Откройте **Admin Console -> Diagnostics -> Export Logs**.
+2. Выберите диапазон времени, включающий проблему (рекомендуется: последние 2 часа).
+3. По возможности воспроизведите проблему один раз.
+4. Нажмите **Generate Archive** и дождитесь завершения.
+5. Загрузите архив по защищенной ссылке из тикета поддержки.
 
-## What to include in the ticket
+## Что указать в тикете
 
-- Exact timestamp of the issue (UTC preferred)
-- Affected user IDs (not personal data)
-- Error message text or screenshot without sensitive details
-- Steps to reproduce
+- Точный timestamp проблемы (предпочтительно UTC)
+- ID затронутых пользователей (без персональных данных)
+- Текст ошибки или скриншот без чувствительных деталей
+- Шаги воспроизведения
 
 ## Notes
 
-- Do not send logs by email.
-- Do not include passwords, tokens, or personal data in free text fields.
-- If export fails, mention export job ID in the ticket.
+- Не отправляйте логи по email.
+- Не указывайте пароли, токены и персональные данные в текстовых полях.
+- Если экспорт не сработал, укажите в тикете ID export job.
 

@@ -1,8 +1,8 @@
-# Support Knowledge Base (Obsidian + GitHub)
+# База знаний техподдержки (Obsidian + GitHub)
 
-Shared technical support knowledge base managed through GitHub pull requests.
+Общая база знаний технической поддержки с процессом изменений через GitHub Pull Request.
 
-## Structure
+## Структура
 
 - `01_Runbooks/`
 - `02_Known-Issues/`
@@ -12,24 +12,29 @@ Shared technical support knowledge base managed through GitHub pull requests.
 - `06_Onboarding/`
 - `90_Templates/`
 
-## Quick Start
+## Быстрый старт
 
-1. Read `CONTRIBUTING.md`
-2. Create branch (`kb/add-...` or `kb/fix-...`)
-3. Update notes in Obsidian
-4. Open PR to `main`
+1. Прочитать `CONTRIBUTING.md`
+2. Создать ветку (`kb/add-...` или `kb/fix-...`)
+3. Обновить заметки в Obsidian
+4. Открыть PR в `main`
 
-## Daily Workflow
+## Онбординг
 
-1. Start of task:
+- Чеклист нового сотрудника: `06_Onboarding/Onboarding Checklist.md`
+- Полная инструкция подключения нового инстанса: `06_Onboarding/Инструкция: подключение нового Obsidian-инстанса.md`
+
+## Ежедневный цикл работы
+
+1. В начале задачи:
    - `git checkout main`
    - `git pull --rebase`
-   - `git checkout -b kb/add-<topic>` (or `kb/fix-<topic>`)
-2. During task:
-   - update notes in Obsidian
-   - run commit from Obsidian Git plugin or terminal
-3. End of task:
+   - `git checkout -b kb/add-<topic>` (или `kb/fix-<topic>`)
+2. Во время задачи:
+   - обновить заметки в Obsidian
+   - выполнить commit через плагин Obsidian Git или терминал
+3. В конце задачи:
    - `git push -u origin <branch>`
-   - open PR and request review
-   - after merge, switch back to `main` and pull latest changes
+   - открыть PR и запросить ревью
+   - после merge вернуться в `main` и подтянуть последние изменения
 
