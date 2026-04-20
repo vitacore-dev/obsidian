@@ -25,46 +25,46 @@ function Ensure-Command {
     )
 
     if (-not (Get-Command $CommandName -ErrorAction SilentlyContinue)) {
-        throw "Команда '$CommandName' не найдена. $InstallHint"
+        throw "Command '$CommandName' not found. $InstallHint"
     }
 }
 
-Write-Host "Windows bootstrap для onboarding базы знаний" -ForegroundColor Green
-Write-Host "Этот скрипт проверит окружение и подготовит локальный репозиторий."
+Write-Host "Windows onboarding bootstrap" -ForegroundColor Green
+Write-Host "This script checks tools and prepares a local repository."
 
-Write-Step "Проверка инструментов"
-Ensure-Command -CommandName "git" -InstallHint "Установите Git for Windows: https://git-scm.com/download/win"
+Write-Step "Checking tools"
+Ensure-Command -CommandName "git" -InstallHint "Install Git for Windows: https://git-scm.com/download/win"
 
-Write-Host "Git найден: $(git --version)"
+Write-Host "Git detected: $(git --version)"
 
 if (Get-Command "gh" -ErrorAction SilentlyContinue) {
-    Write-Host "GitHub CLI найден: $(gh --version | Select-Object -First 1)"
+    Write-Host "GitHub CLI detected: $(gh --version | Select-Object -First 1)"
 } else {
-    Write-Warn "GitHub CLI (gh) не найден. Это нормально, но авторизацию может быть проще сделать через GitHub Desktop."
+    Write-Warn "GitHub CLI (gh) not found. This is fine, but authentication may be easier with GitHub Desktop."
 }
 
-Write-Step "Подготовка директорий"
+Write-Step "Preparing directories"
 if (-not (Test-Path -Path $TargetParent)) {
-    Write-Host "Создаю папку: $TargetParent"
+    Write-Host "Creating directory: $TargetParent"
     New-Item -Path $TargetParent -ItemType Directory | Out-Null
 }
 
 $RepoPath = Join-Path $TargetParent $RepoName
-Write-Host "Целевая папка репозитория: $RepoPath"
+Write-Host "Target repository path: $RepoPath"
 
-Write-Step "Клонирование или проверка существующего репозитория"
+Write-Step "Cloning or reusing repository"
 if (Test-Path -Path $RepoPath) {
     if (-not (Test-Path -Path (Join-Path $RepoPath ".git"))) {
-        throw "Папка '$RepoPath' уже существует, но это не git-репозиторий. Переименуйте/удалите папку и запустите скрипт снова."
+        throw "Directory '$RepoPath' already exists, but it is not a git repository. Rename/delete it and run the script again."
     }
 
-    Write-Host "Найден существующий git-репозиторий."
+    Write-Host "Found existing git repository."
 } else {
-    Write-Host "Клонирую: $RepoUrl"
+    Write-Host "Cloning: $RepoUrl"
     git clone $RepoUrl $RepoPath
 }
 
-Write-Step "Проверка состояния репозитория"
+Write-Step "Checking repository status"
 Push-Location $RepoPath
 try {
     $remoteUrl = git remote get-url origin
@@ -72,19 +72,19 @@ try {
 
     $branch = git branch --show-current
     if ([string]::IsNullOrWhiteSpace($branch)) {
-        Write-Warn "Не удалось определить текущую ветку."
+        Write-Warn "Could not determine current branch."
     } else {
-        Write-Host "Текущая ветка: $branch"
+        Write-Host "Current branch: $branch"
     }
 
     if (-not $SkipPull) {
-        Write-Host "Выполняю git pull --rebase..."
+        Write-Host "Running git pull --rebase..."
         git pull --rebase
     } else {
-        Write-Host "Шаг pull пропущен (параметр -SkipPull)."
+        Write-Host "Pull step skipped (-SkipPull)."
     }
 
-    Write-Host "Текущее состояние:"
+    Write-Host "Repository status:"
     git status --short --branch
 }
 finally {
