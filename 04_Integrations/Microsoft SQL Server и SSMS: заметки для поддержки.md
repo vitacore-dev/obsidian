@@ -1,5 +1,5 @@
 ---
-title: "Microsoft SQL Server и SSMS заметки для поддержки"
+title: "Microsoft SQL Server и SSMS: заметки для поддержки"
 owner: "support-l2"
 last_updated: "2026-04-15"
 product_version: "all"
