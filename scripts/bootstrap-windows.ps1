@@ -91,10 +91,10 @@ finally {
     Pop-Location
 }
 
-Write-Step "Готово"
-Write-Host "1) Откройте Obsidian."
-Write-Host "2) Выберите 'Open folder as vault' и укажите: $RepoPath"
-Write-Host "3) Включите Community plugin 'Obsidian Git'."
-Write-Host "4) Выполните команду 'Obsidian Git: Pull'."
+Write-Step "Done"
+Write-Host "1) Open Obsidian."
+Write-Host "2) Choose 'Open folder as vault' and select: $RepoPath"
+Write-Host "3) Enable Community plugin 'Obsidian Git'."
+Write-Host "4) Run command 'Obsidian Git: Pull'."
 Write-Host ""
-Write-Host "Если возникла ошибка аутентификации, выполните 'gh auth login' или войдите через GitHub Desktop." -ForegroundColor Yellow
+Write-Host "If auth fails, run 'gh auth login' or sign in via GitHub Desktop." -ForegroundColor Yellow
