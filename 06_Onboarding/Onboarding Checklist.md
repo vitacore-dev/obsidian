@@ -1,7 +1,7 @@
 ---
 title: "Чеклист подключения к базе знаний"
 owner: "support-leads"
-last_updated: "2026-04-15"
+last_updated: "2026-04-20"
 product_version: "all"
 tags: [onboarding, knowledge-base, support]
 ---
@@ -17,12 +17,55 @@ tags: [onboarding, knowledge-base, support]
 ## 2. Подготовка локального окружения
 
 1. Установить необходимые инструменты:
-   - Obsidian
-   - Git
-   - Опционально: GitHub CLI (`gh`)
-2. Клонировать репозиторий локально.
-3. Открыть папку репозитория как vault в Obsidian.
-4. Включить плагин `Obsidian Git`.
+   - Obsidian (desktop);
+   - Git;
+   - опционально: GitHub CLI (`gh`) или GitHub Desktop.
+2. Проверить, что инструменты доступны в терминале:
+   - `git --version`;
+   - опционально: `gh --version`.
+3. Для Windows (упрощенный вариант для новичков) можно запустить скрипт первичной настройки:
+   - `powershell -ExecutionPolicy Bypass -File .\scripts\bootstrap-windows.ps1`
+   - скрипт проверит Git, подготовит рабочую папку и выполнит clone/pull.
+4. Выбрать рабочую папку для репозитория:
+   - macOS: обычно `~/Documents` или `~/Work`;
+   - Windows: обычно `$HOME\Documents`.
+5. Проверить, что папка `obsidian` в выбранной директории не конфликтует с существующим клоном:
+   - если папка уже есть и это рабочий клон - использовать его и сделать `git pull --rebase`;
+   - если папка есть, но это неактуальный клон - переименовать или удалить перед повторным clone.
+6. Клонировать репозиторий:
+   - HTTPS: `git clone https://github.com/vitacore-dev/obsidian.git`
+   - SSH (если уже настроены ключи): `git clone git@github.com:vitacore-dev/obsidian.git`
+7. Перейти в папку репозитория и проверить состояние:
+   - `cd obsidian` (macOS) или `cd .\obsidian` (Windows);
+   - `git remote -v` (должен быть `origin` с корректным URL);
+   - `git status` (рабочее дерево чистое).
+8. Открыть папку репозитория как vault в Obsidian:
+   - `Open folder as vault` -> выбрать локальную папку `obsidian`.
+9. Настроить `Obsidian Git` (сторонний плагин):
+   - открыть `Settings -> Community plugins`;
+   - убедиться, что `Restricted mode` отключен (иначе сторонние плагины не активируются);
+   - нажать `Browse`, найти `Obsidian Git`, установить и включить плагин;
+   - после установки перезапустить Obsidian, если плагин не появился в списке команд.
+10. Проверить, что плагин корректно подключился:
+   - открыть `Cmd/Ctrl + P` и найти команды:
+     - `Obsidian Git: Pull`
+     - `Obsidian Git: Commit all changes`
+     - `Obsidian Git: Push`
+     - `Obsidian Git: Open source control view`
+   - если команд нет, проверить что vault открыт из папки git-репозитория (в корне есть `.git`).
+11. Выставить минимальные рабочие настройки плагина:
+   - в разделе настроек `Obsidian Git` оставить ручной режим синхронизации;
+   - отключить агрессивный `Auto pull`/`Auto push` на старте онбординга;
+   - включить отображение source control view для наглядной проверки diff перед commit.
+12. Сделать первую синхронизацию через плагин:
+   - выполнить `Obsidian Git: Pull`;
+   - при конфликте остановиться и решить конфликт через Git/IDE, не коммитить конфликтные файлы;
+   - при ошибке аутентификации пройти логин в GitHub (`gh auth login`/GitHub Desktop) и повторить pull.
+13. Проверить полный цикл плагина на тестовом изменении:
+   - изменить одну строку в любой служебной заметке онбординга;
+   - выполнить `Obsidian Git: Commit all changes` с понятным сообщением;
+   - выполнить `Obsidian Git: Push`;
+   - проверить в GitHub, что коммит появился в вашей ветке.
 
 ## 3. Базовые материалы и процесс
 
