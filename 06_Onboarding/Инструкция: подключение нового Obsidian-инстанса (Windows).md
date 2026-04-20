@@ -92,6 +92,29 @@ tags: [onboarding, obsidian, git, github, windows]
 - появился ожидаемый вывод (`git --version`, `git status`, путь из `Get-Location`);
 - промпт вернулся к виду `PS C:\...>` и можно вводить следующую команду.
 
+## 2.3. Авторизация в GitHub через токен (PAT)
+
+Если вход через `gh auth login` или GitHub Desktop недоступен, можно использовать Personal Access Token.
+
+1. Создать токен в GitHub:
+   - `GitHub -> Settings -> Developer settings -> Personal access tokens -> Tokens (classic)` или Fine-grained token;
+   - выдать минимум прав на нужный репозиторий (`repo` для classic, или repository access с `Contents: Read and write` для fine-grained).
+2. Использовать HTTPS-remote:
+   - `git remote -v` (URL должен быть вида `https://github.com/...`).
+3. Выполнить любую команду, требующую авторизацию:
+   - `git pull` или `git push`.
+4. В окне аутентификации ввести:
+   - username: ваш GitHub login;
+   - password: вставить PAT (не пароль от аккаунта).
+5. Проверить, что credential сохранен:
+   - повторный `git pull`/`git push` проходит без запроса токена.
+
+Важно по безопасности:
+
+- не вставлять токен в URL репозитория и не хранить его в `.md`/`.env` внутри этого репозитория;
+- не отправлять токен в чат, почту и тикеты;
+- при утечке сразу отозвать токен в GitHub и создать новый.
+
 ## 3. Клонирование репозитория (отдельно и подробно)
 
 Этот шаг делается один раз на рабочем ноутбуке. Ниже безопасная последовательность, чтобы избежать ошибок с путями и правами.

@@ -97,4 +97,4 @@ Write-Host "2) Choose 'Open folder as vault' and select: $RepoPath"
 Write-Host "3) Enable Community plugin 'Obsidian Git'."
 Write-Host "4) Run command 'Obsidian Git: Pull'."
 Write-Host ""
-Write-Host "If auth fails, run 'gh auth login' or sign in via GitHub Desktop." -ForegroundColor Yellow
+Write-Host "If auth fails, run 'gh auth login', sign in via GitHub Desktop, or use a GitHub PAT." -ForegroundColor Yellow
