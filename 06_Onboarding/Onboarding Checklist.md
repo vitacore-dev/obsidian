@@ -30,6 +30,7 @@ tags: [onboarding, knowledge-base, support]
 - Прочитать `CONTRIBUTING.md`.
 - Прочитать `docs/PROJECT_OVERVIEW.md`.
 - Пройти `06_Onboarding/Инструкция: подключение нового Obsidian-инстанса.md`.
+- Для Windows пройти `06_Onboarding/Инструкция: подключение нового Obsidian-инстанса (Windows).md`.
 - Изучить структуру каталогов:
   - `01_Runbooks`
   - `02_Known-Issues`
