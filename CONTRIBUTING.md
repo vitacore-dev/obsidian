@@ -73,6 +73,33 @@ tags: [runbook, auth, sso]
 5. Пройти автоматические проверки и ревью
 6. Выполнить merge
 
+## Обязательная защита main (нормальный вид на будущее)
+
+### Настройки GitHub Branch Protection
+
+Для ветки `main` обязательно включить:
+
+- `Require a pull request before merging`
+- минимум `1` approval
+- `Require status checks to pass before merging` (чек `KB Checks`)
+- `Require branches to be up to date before merging`
+- `Require conversation resolution before merging`
+- запрет `force push`
+- запрет удаления ветки `main`
+
+### Рабочие правила команды
+
+- Нельзя пушить напрямую в `main`, только через PR из веток `kb/*`.
+- Перед commit обязательно проверить diff (`git status`, `git diff`).
+- Перед push обязательно запустить `python3 scripts/validate-kb.py`.
+- После merge ветки удалять, локальную `main` синхронизировать (`git pull --rebase`).
+
+### Настройки Obsidian Git (обязательно)
+
+- Отключить автоматические `commit/push/pull` на старте/по таймеру.
+- Использовать ручной цикл: `Pull -> Review diff -> Commit -> Push`.
+- Не использовать сообщения вида `vault backup: ...` для рабочих изменений.
+
 ## Режимы ревью
 
 - **Fast lane** (небольшие изменения: опечатки, ссылки, уточнения):
