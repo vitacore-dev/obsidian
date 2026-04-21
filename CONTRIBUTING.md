@@ -35,6 +35,7 @@
 - `06_Onboarding` - материалы для адаптации сотрудников
 - `07_MS-SQL` - Microsoft SQL Server: runbook и справочные материалы
 - `08_PostgreSQL` - PostgreSQL: runbook, доступ, инструменты
+- `09_SMEV` - продукт SMEV: runbook, конфигурация, диагностика
 - `90_Templates` - шаблоны заметок
 
 ## Требования к заметкам

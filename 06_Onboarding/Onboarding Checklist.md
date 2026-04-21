@@ -81,6 +81,7 @@ tags: [onboarding, knowledge-base, support]
   - `04_Integrations`
   - `07_MS-SQL`
   - `08_PostgreSQL`
+  - `09_SMEV`
   - `90_Templates`
 
 ## 4. Стандарты контента

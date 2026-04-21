@@ -12,6 +12,7 @@
 - `06_Onboarding/`
 - `07_MS-SQL/`
 - `08_PostgreSQL/`
+- `09_SMEV/`
 - `90_Templates/`
 
 ## Быстрый старт

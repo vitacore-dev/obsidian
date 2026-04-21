@@ -10,4 +10,5 @@
 /08_PostgreSQL/ @support-l2 @engineering-integrations
 /05_Incidents-Postmortem/ @support-leads @engineering-oncall
 /06_Onboarding/ @support-leads
+/09_SMEV/ @support-l2 @engineering-integrations
 /90_Templates/ @support-leads
