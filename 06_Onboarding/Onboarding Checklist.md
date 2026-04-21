@@ -66,6 +66,10 @@ tags: [onboarding, knowledge-base, support]
    - выполнить `Obsidian Git: Commit all changes` с понятным сообщением;
    - выполнить `Obsidian Git: Push`;
    - проверить в GitHub, что коммит появился в вашей ветке.
+14. Настроить вложения Obsidian:
+   - `Settings -> Files and links -> Default location for new attachments` = `In the folder specified below`;
+   - `Attachment folder path` = `99_Assets`;
+   - хранить вложения по разделам: `99_Assets/<раздел>/`.
 
 ## 3. Базовые материалы и процесс
 

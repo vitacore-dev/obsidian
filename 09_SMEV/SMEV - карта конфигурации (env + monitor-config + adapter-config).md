@@ -40,5 +40,5 @@ tags: [smev, config, env, monitoring]
 
 ## Связанные материалы
 
-- [[SMEV - руководство оператора (кратко из USER_GUIDE_RU)]]
+- [[SMEV - руководство пользователя (кратко из USER_GUIDE_RU)]]
 - [[SMEV - деплой и обновление (Linux)]]
