@@ -24,6 +24,6 @@ tags: [pgadmin, postgresql, support-tools]
 
 ## Связанные материалы
 
-- [[PostgreSQL: базовая админка для поддержки]]
-- [[pg_hba.conf: доступ к PostgreSQL]]
+- [[PostgreSQL - базовая админка для поддержки]]
+- [[pg_hba.conf - доступ к PostgreSQL]]
 - [[Microsoft SQL Server и SSMS заметки для поддержки]]

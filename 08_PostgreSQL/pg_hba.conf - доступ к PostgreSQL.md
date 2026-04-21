@@ -33,5 +33,5 @@ SELECT pg_reload_conf();
 
 ## Связанные материалы
 
-- [[PostgreSQL: базовая админка для поддержки]]
-- [[pgAdmin: управление PostgreSQL для поддержки]]
+- [[PostgreSQL - базовая админка для поддержки]]
+- [[pgAdmin - управление PostgreSQL для поддержки]]

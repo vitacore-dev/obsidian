@@ -26,4 +26,4 @@ tags: [mssql, ssms, support-tools, database]
 
 ## Сравнение инструментов
 
-- PostgreSQL GUI: [[pgAdmin: управление PostgreSQL для поддержки]]
+- PostgreSQL GUI: [[pgAdmin - управление PostgreSQL для поддержки]]

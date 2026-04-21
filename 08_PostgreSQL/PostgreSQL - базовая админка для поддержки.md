@@ -12,12 +12,12 @@ tags: [postgresql, integration, database, support-tools]
 
 ## Инструменты
 
-- [[pgAdmin: управление PostgreSQL для поддержки]]
+- [[pgAdmin - управление PostgreSQL для поддержки]]
 - `psql` (консольный клиент)
 
 ## Конфигурация доступа
 
-- [[pg_hba.conf: доступ к PostgreSQL]]
+- [[pg_hba.conf - доступ к PostgreSQL]]
 
 ## Операционные действия
 

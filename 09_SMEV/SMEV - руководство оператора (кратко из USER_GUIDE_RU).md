@@ -43,5 +43,5 @@ tags: [smev, operator-guide, monitoring, messageid]
 
 ## Связанные материалы
 
-- [[SMEV: карта конфигурации (env + monitor-config + adapter-config)]]
-- [[SMEV: деплой и обновление (Linux)]]
+- [[SMEV - карта конфигурации (env + monitor-config + adapter-config)]]
+- [[SMEV - деплой и обновление (Linux)]]
