@@ -10,6 +10,8 @@
 - `04_Integrations/`
 - `05_Incidents-Postmortem/`
 - `06_Onboarding/`
+- `07_MS-SQL/`
+- `08_PostgreSQL/`
 - `90_Templates/`
 
 ## Быстрый старт

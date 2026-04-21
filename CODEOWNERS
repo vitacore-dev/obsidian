@@ -6,6 +6,8 @@
 /02_Known-Issues/ @support-l2
 /03_Product-FAQ/ @support-l1 @support-leads
 /04_Integrations/ @support-l2 @engineering-integrations
+/07_MS-SQL/ @support-l2 @engineering-integrations
+/08_PostgreSQL/ @support-l2 @engineering-integrations
 /05_Incidents-Postmortem/ @support-leads @engineering-oncall
 /06_Onboarding/ @support-leads
 /90_Templates/ @support-leads

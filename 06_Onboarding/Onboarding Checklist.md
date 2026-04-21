@@ -1,7 +1,7 @@
 ---
 title: "Чеклист подключения к базе знаний"
 owner: "support-leads"
-last_updated: "2026-04-20"
+last_updated: "2026-04-21"
 product_version: "all"
 tags: [onboarding, knowledge-base, support]
 ---
@@ -78,6 +78,9 @@ tags: [onboarding, knowledge-base, support]
   - `01_Runbooks`
   - `02_Known-Issues`
   - `03_Product-FAQ`
+  - `04_Integrations`
+  - `07_MS-SQL`
+  - `08_PostgreSQL`
   - `90_Templates`
 
 ## 4. Стандарты контента

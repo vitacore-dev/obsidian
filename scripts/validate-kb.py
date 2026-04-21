@@ -16,11 +16,21 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 REQUIRED_FRONTMATTER_FIELDS = ["title", "owner", "last_updated", "product_version", "tags"]
+RUNBOOK_SECTIONS = [
+    "## Symptoms",
+    "## Scope",
+    "## Diagnosis",
+    "## Resolution / Workaround",
+    "## Escalation",
+]
 REQUIRED_SECTIONS = {
-    "01_Runbooks": ["## Symptoms", "## Scope", "## Diagnosis", "## Resolution / Workaround", "## Escalation"],
+    "01_Runbooks": RUNBOOK_SECTIONS,
     "02_Known-Issues": ["## Issue Summary", "## Symptoms", "## Root Cause", "## Workaround", "## Permanent Fix Status"],
     "03_Product-FAQ": ["## Question", "## Short Answer", "## Steps for Customer"],
 }
+
+# Runbooks may live outside 01_Runbooks; only files named RUNBOOK*.md get runbook section checks.
+RUNBOOK_EXTRA_FOLDERS = ("07_MS-SQL", "08_PostgreSQL")
 
 
 def split_frontmatter(text: str) -> tuple[str | None, str]:
@@ -54,7 +64,11 @@ def validate_file(path: Path) -> list[str]:
                 errors.append(f"missing frontmatter field: {field}")
 
     folder = path.parent.name
-    required_sections = REQUIRED_SECTIONS.get(folder, [])
+    required_sections: list[str] = []
+    if folder in REQUIRED_SECTIONS:
+        required_sections = REQUIRED_SECTIONS[folder]
+    elif folder in RUNBOOK_EXTRA_FOLDERS and path.name.startswith("RUNBOOK"):
+        required_sections = RUNBOOK_SECTIONS
     for section in required_sections:
         if section not in body:
             errors.append(f"missing section: {section}")
@@ -65,6 +79,12 @@ def validate_file(path: Path) -> list[str]:
 def target_files() -> list[Path]:
     paths: list[Path] = []
     for folder in REQUIRED_SECTIONS:
+        directory = ROOT / folder
+        if not directory.exists():
+            continue
+        for file_path in directory.glob("*.md"):
+            paths.append(file_path)
+    for folder in RUNBOOK_EXTRA_FOLDERS:
         directory = ROOT / folder
         if not directory.exists():
             continue
