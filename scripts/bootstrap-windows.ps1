@@ -29,6 +29,65 @@ function Ensure-Command {
     }
 }
 
+function Get-DefaultBranchName {
+    param([string]$RepoDir)
+
+    Push-Location $RepoDir
+    try {
+        git remote show origin 2>$null | ForEach-Object {
+            if ($_ -match '^\s*HEAD branch:\s*(.+)\s*$') {
+                return $Matches[1].Trim()
+            }
+        }
+        $sym = (git symbolic-ref -q --short refs/remotes/origin/HEAD 2>$null).Trim()
+        if ($sym) {
+            if ($sym -match '^origin/(.+)$') {
+                return $Matches[1]
+            }
+            return $sym
+        }
+    }
+    finally {
+        Pop-Location
+    }
+    return "main"
+}
+
+function Test-WorkingTreeHasFiles {
+    param([string]$RepoDir)
+
+    $items = Get-ChildItem -LiteralPath $RepoDir -Force -ErrorAction SilentlyContinue |
+        Where-Object { $_.Name -ne ".git" }
+    return ($null -ne $items -and $items.Count -gt 0)
+}
+
+function Repair-EmptyWorkingTree {
+    param([string]$RepoDir)
+
+    if (Test-WorkingTreeHasFiles -RepoDir $RepoDir) {
+        return
+    }
+
+    Write-Warn "Repository folder exists but working tree has no files (only .git or empty). Trying fetch + checkout."
+    Push-Location $RepoDir
+    try {
+        git fetch origin
+        $branch = Get-DefaultBranchName -RepoDir $RepoDir
+        git checkout -f $branch 2>$null
+        if (-not (Test-WorkingTreeHasFiles -RepoDir $RepoDir)) {
+            git reset --hard "origin/$branch"
+        }
+    }
+    finally {
+        Pop-Location
+    }
+
+    if (-not (Test-WorkingTreeHasFiles -RepoDir $RepoDir)) {
+        throw "Working tree is still empty after repair. Delete folder '$RepoDir' and run the script again, or clone manually: git clone $RepoUrl"
+    }
+    Write-Host "Working tree restored."
+}
+
 Write-Host "Windows onboarding bootstrap" -ForegroundColor Green
 Write-Host "This script checks tools and prepares a local repository."
 
@@ -64,6 +123,8 @@ if (Test-Path -Path $RepoPath) {
     git clone $RepoUrl $RepoPath
 }
 
+Repair-EmptyWorkingTree -RepoDir $RepoPath
+
 Write-Step "Checking repository status"
 Push-Location $RepoPath
 try {
@@ -86,6 +147,14 @@ try {
 
     Write-Host "Repository status:"
     git status --short --branch
+
+    $top = Get-ChildItem -LiteralPath (Get-Location) -Force |
+        Where-Object { $_.Name -ne ".git" } |
+        Select-Object -First 15 Name
+    if ($top) {
+        Write-Host "Top-level items (first 15):"
+        $top | ForEach-Object { Write-Host "  $($_.Name)" }
+    }
 }
 finally {
     Pop-Location
@@ -98,3 +167,4 @@ Write-Host "3) Enable Community plugin 'Obsidian Git'."
 Write-Host "4) Run command 'Obsidian Git: Pull'."
 Write-Host ""
 Write-Host "If auth fails, run 'gh auth login' or sign in via GitHub Desktop." -ForegroundColor Yellow
+Write-Host "Tip: In Windows Explorer, enable Hidden items if the folder looks empty (.git is hidden by default)."
