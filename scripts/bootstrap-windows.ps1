@@ -34,11 +34,20 @@ function Get-DefaultBranchName {
 
     Push-Location $RepoDir
     try {
+        $headSymref = git ls-remote --symref origin HEAD 2>$null | Select-String 'ref: refs/heads/' | Select-Object -First 1
+        if ($headSymref) {
+            $line = $headSymref.ToString()
+            if ($line -match 'ref:\s+refs/heads/([^\s]+)\s+HEAD') {
+                return $Matches[1]
+            }
+        }
+
         git remote show origin 2>$null | ForEach-Object {
             if ($_ -match '^\s*HEAD branch:\s*(.+)\s*$') {
                 return $Matches[1].Trim()
             }
         }
+
         $sym = (git symbolic-ref -q --short refs/remotes/origin/HEAD 2>$null).Trim()
         if ($sym) {
             if ($sym -match '^origin/(.+)$') {
@@ -46,11 +55,19 @@ function Get-DefaultBranchName {
             }
             return $sym
         }
+
+        $remoteMain = git show-ref --verify --quiet refs/remotes/origin/main; if ($LASTEXITCODE -eq 0) { return "main" }
+        $remoteMaster = git show-ref --verify --quiet refs/remotes/origin/master; if ($LASTEXITCODE -eq 0) { return "master" }
+
+        $anyRemote = git for-each-ref --format='%(refname:short)' refs/remotes/origin | Select-Object -First 1
+        if ($anyRemote -and $anyRemote -match '^origin/(.+)$') {
+            return $Matches[1]
+        }
     }
     finally {
         Pop-Location
     }
-    return "main"
+    return ""
 }
 
 function Test-WorkingTreeHasFiles {
@@ -73,7 +90,17 @@ function Repair-EmptyWorkingTree {
     try {
         git fetch origin
         $branch = Get-DefaultBranchName -RepoDir $RepoDir
-        git checkout -f $branch 2>$null
+        if ([string]::IsNullOrWhiteSpace($branch)) {
+            throw "Could not detect default remote branch after fetch. Check repository access and authentication."
+        }
+
+        $remoteBranchRef = "refs/remotes/origin/$branch"
+        git show-ref --verify --quiet $remoteBranchRef
+        if ($LASTEXITCODE -ne 0) {
+            throw "Remote branch 'origin/$branch' is not available locally after fetch. Check permissions and remote repository state."
+        }
+
+        git checkout -B $branch "origin/$branch"
         if (-not (Test-WorkingTreeHasFiles -RepoDir $RepoDir)) {
             git reset --hard "origin/$branch"
         }
