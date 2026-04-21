@@ -21,7 +21,7 @@ tags: [postgresql, integration, database, support-tools]
 
 ## Операционные действия
 
-- [[RUNBOOK - Завершение активной сессии в PostgreSQL]]
+- [[Завершение активной сессии в PostgreSQL]]
 
 ## Полезные ссылки
 

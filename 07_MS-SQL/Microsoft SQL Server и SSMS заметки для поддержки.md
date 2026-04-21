@@ -22,7 +22,7 @@ tags: [mssql, ssms, support-tools, database]
 
 ## Операционные материалы
 
-- [[RUNBOOK - Завершение активной сессии в Microsoft SQL Server]]
+- [[Завершение активной сессии в Microsoft SQL Server]]
 
 ## Сравнение инструментов
 

@@ -54,6 +54,6 @@ tags: [runbook, postgresql, database]
 
 ## Связанные материалы
 
-- [[RUNBOOK - Завершение активной сессии в Microsoft SQL Server]]
+- [[Завершение активной сессии в Microsoft SQL Server]]
 - [[PostgreSQL: базовая админка для поддержки]]
 - [[pg_hba.conf: доступ к PostgreSQL]]

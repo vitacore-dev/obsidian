@@ -52,5 +52,5 @@ tags: [runbook, mssql, database]
 
 ## Связанные материалы
 
-- [[RUNBOOK - Завершение активной сессии в PostgreSQL]]
+- [[Завершение активной сессии в PostgreSQL]]
 - [[Microsoft SQL Server и SSMS заметки для поддержки]]
