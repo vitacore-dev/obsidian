@@ -70,4 +70,4 @@ tags: [smev, linux, deploy, operations]
 ## Связанные материалы
 
 - [[SMEV - карта конфигурации (env + monitor-config + adapter-config)]]
-- [[SMEV - руководство оператора (кратко из USER_GUIDE_RU)]]
+- [[SMEV - руководство пользователя (кратко из USER_GUIDE_RU)]]
