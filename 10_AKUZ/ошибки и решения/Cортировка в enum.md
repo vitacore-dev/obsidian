@@ -15,4 +15,3 @@ set [Order]='2'
 where enumid=11802
 После изменений в БД рефрешнуть VCLib.BaseEnumHolder, перезайти в клиент
 
-![[Pasted image 20260429110311.png]]
