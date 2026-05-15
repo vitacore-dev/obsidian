@@ -1,0 +1,241 @@
+<mxfile host="Electron" modified="2024-06-07T10:33:24.876Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.13 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="kGolMFbFNvC16ptMqtWL" version="24.4.13" type="device">
+  <diagram id="wFE0QG_FPsp0jaGvCLVb" name="Page-1">
+    <mxGraphModel dx="2284" dy="1944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-66" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-395" y="80" width="290" height="378" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-395" y="20" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-3" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Отправка льготников в региональный и федеральный регистр.Ульяновск&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="30" y="-90" width="880" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-4" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;АКУЗ&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-285" y="35" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-5" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Добавление/изменение льготника&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;В АК пациента добавляется/меняется льгота с типом &lt;b&gt;региональная&lt;/b&gt;. При этом срабатывает действие при изменении объекта (REGIONAL_BENEFITS_DIRECTION)&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;с вызовом хранимой процедуры&amp;nbsp;sp_RR_Direction. Формируется xml, которая отправляется в очередь rabbit -&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;rds.registry (&lt;/b&gt;сущность для логирования rabbit_send_jbject&lt;b&gt;)&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;(прописывается в хранимой процедуре, либо указывается параметр queue, &lt;/span&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;проверить &lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;и там и там)&lt;/span&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-365" y="70" width="260" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="w7SvvbEXYDQ_G_9nUwTs-9" target="w7SvvbEXYDQ_G_9nUwTs-34" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-9" value="исходящие пакеты" style="label;whiteSpace=wrap;html=1;image=img/clipart/Gear_128x128.png" parent="1" vertex="1">
+          <mxGeometry x="-275" y="310" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="w7SvvbEXYDQ_G_9nUwTs-26" target="w7SvvbEXYDQ_G_9nUwTs-35" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="w7SvvbEXYDQ_G_9nUwTs-26" target="w7SvvbEXYDQ_G_9nUwTs-36" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="w7SvvbEXYDQ_G_9nUwTs-26" target="w7SvvbEXYDQ_G_9nUwTs-46" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="w7SvvbEXYDQ_G_9nUwTs-26" target="w7SvvbEXYDQ_G_9nUwTs-47" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kvKt-mwTTZmvSb9pK7DF-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="w7SvvbEXYDQ_G_9nUwTs-26" target="kvKt-mwTTZmvSb9pK7DF-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1100" y="570" />
+              <mxPoint x="1100" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-26" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="980" y="570" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-27" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;RDS&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1010" y="580" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-28" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Добавление/изменение льготника&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;В таблице RR_patient добавляется/изменяется информация по льготникам- кодом. Вызывается &lt;span style=&quot;background-color: initial;&quot;&gt;хранимая процедура &lt;b&gt;sp_RR_Direction&lt;/b&gt;. Формируется xml, которая отправляется в очередь rabbit -&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;RDSSync &lt;/b&gt;или при её отстствии-формируется наименование очереди из таблицы связанных серверов&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;T_SYNC_SERVERS, &lt;/b&gt;где наименование сервера=наименованию очереди.&lt;/span&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="930" y="640" width="260" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-33" value="&lt;span style=&quot;font-size: 14px; text-wrap: wrap;&quot;&gt;RabbitMQ&lt;/span&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="720" y="320" width="200" height="156" as="geometry">
+            <mxRectangle x="390" y="210" width="100" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-34" value="&lt;div style=&quot;font-weight: 700;&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;rds.registry&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="w7SvvbEXYDQ_G_9nUwTs-33" vertex="1">
+          <mxGeometry y="26" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-35" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;ul&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="w7SvvbEXYDQ_G_9nUwTs-33" vertex="1">
+          <mxGeometry y="52" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-36" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;aps&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="w7SvvbEXYDQ_G_9nUwTs-33" vertex="1">
+          <mxGeometry y="78" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-46" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;mvd&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="w7SvvbEXYDQ_G_9nUwTs-33" vertex="1">
+          <mxGeometry y="104" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-47" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;dimgrad&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="w7SvvbEXYDQ_G_9nUwTs-33" vertex="1">
+          <mxGeometry y="130" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="w7SvvbEXYDQ_G_9nUwTs-34" target="w7SvvbEXYDQ_G_9nUwTs-26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-51" value="прослушка&lt;div&gt;очереди ul&lt;/div&gt;&lt;div&gt;(прописана в конфиге)&lt;/div&gt;" style="label;whiteSpace=wrap;html=1;image=img/clipart/Gear_128x128.png" parent="1" vertex="1">
+          <mxGeometry x="-275" y="390" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.998;entryY=0.376;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="w7SvvbEXYDQ_G_9nUwTs-35" target="w7SvvbEXYDQ_G_9nUwTs-51" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" parent="1" source="w7SvvbEXYDQ_G_9nUwTs-53" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="129.47058823529414" y="619.9999999999995" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-53" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-54" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;АПС&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;(аптека)&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="70" y="635" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-55" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="270" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-56" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;МВД&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="300" y="630" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-58" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="620" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-59" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Димитровград&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="575" y="630" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="w7SvvbEXYDQ_G_9nUwTs-36" target="w7SvvbEXYDQ_G_9nUwTs-53" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="411" />
+              <mxPoint x="320" y="530" />
+              <mxPoint x="100" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="w7SvvbEXYDQ_G_9nUwTs-46" target="w7SvvbEXYDQ_G_9nUwTs-55" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-71" value="прослушка&lt;div&gt;очереди aps&lt;/div&gt;&lt;div&gt;(прописана в конфиге)&lt;/div&gt;" style="label;whiteSpace=wrap;html=1;image=img/clipart/Gear_128x128.png" parent="1" vertex="1">
+          <mxGeometry x="30" y="680" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-72" value="добавлена хранимка&amp;nbsp;SP_CreateBenefitsDirection.sql&lt;div&gt;для отправки закрытия льготы умершим.&lt;/div&gt;" style="label;whiteSpace=wrap;html=1;image=img/clipart/Gear_128x128.png" parent="1" vertex="1">
+          <mxGeometry x="-400" y="458" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-73" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Запрос льготников из регионального регистра. Ульяновск&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="70" y="1530" width="610" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-75" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-410" y="1750" width="290" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-76" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-410" y="1690" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-78" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;APS&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-300" y="1705" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-79" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Запрос льготников из регистра&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;В папке Интеграция с РДС открываем &quot;Настройка&quot;, выбираем тип пакета&amp;nbsp;RR_PATIENT- нажимаем ПКМ &quot;загрузить&quot; при этом вывзывается хранимая процедура &lt;b&gt;RR_PATIENT&lt;/b&gt;. При этом вызывается хранимая процедура&amp;nbsp;sp_RR_Patients, собирающая пакет для отправки из всех льготников в раббит(сущность для логирования rabbit_send_object), очередь прописана в конфиге&amp;nbsp;&amp;lt;add key=&quot;RDSRegistryQueue&quot; value=&quot;&lt;b&gt;rds.registry&lt;/b&gt;&quot; /&amp;gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-400" y="1760" width="260" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-85" value="&lt;span style=&quot;font-size: 14px; text-wrap: wrap;&quot;&gt;RabbitMQ&lt;/span&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="1650" width="200" height="156" as="geometry">
+            <mxRectangle x="390" y="210" width="100" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-86" value="&lt;div style=&quot;font-weight: 700;&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;rds.registry&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="w7SvvbEXYDQ_G_9nUwTs-85" vertex="1">
+          <mxGeometry y="26" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-87" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;ul&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="w7SvvbEXYDQ_G_9nUwTs-85" vertex="1">
+          <mxGeometry y="52" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-88" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;aps&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="w7SvvbEXYDQ_G_9nUwTs-85" vertex="1">
+          <mxGeometry y="78" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-89" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;mvd&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="w7SvvbEXYDQ_G_9nUwTs-85" vertex="1">
+          <mxGeometry y="104" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="w7SvvbEXYDQ_G_9nUwTs-90" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;dimgrad&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="w7SvvbEXYDQ_G_9nUwTs-85" vertex="1">
+          <mxGeometry y="130" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="JUy6sToaJ2i6TBw9OuMA-4" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d80073;strokeColor=#A50040;" parent="1" source="kvKt-mwTTZmvSb9pK7DF-5" target="w7SvvbEXYDQ_G_9nUwTs-34" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="600" as="sourcePoint" />
+            <mxPoint x="570" y="550" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JUy6sToaJ2i6TBw9OuMA-5" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;fillColor=#d80073;strokeColor=#A50040;" parent="1" source="kvKt-mwTTZmvSb9pK7DF-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="540" as="sourcePoint" />
+            <mxPoint x="720" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l1yoPZ5C8_vgg3xpbMcn-2" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" parent="1" source="w7SvvbEXYDQ_G_9nUwTs-55" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="620" as="sourcePoint" />
+            <mxPoint x="390" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kvKt-mwTTZmvSb9pK7DF-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.859;entryY=-0.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="w7SvvbEXYDQ_G_9nUwTs-47" target="w7SvvbEXYDQ_G_9nUwTs-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kvKt-mwTTZmvSb9pK7DF-2" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=0.883;exitY=0.04;exitDx=0;exitDy=0;exitPerimeter=0;fillColor=#d80073;strokeColor=#A50040;" edge="1" parent="1" source="w7SvvbEXYDQ_G_9nUwTs-55" target="kvKt-mwTTZmvSb9pK7DF-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="590" as="sourcePoint" />
+            <mxPoint x="720" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kvKt-mwTTZmvSb9pK7DF-3" value="отправка в регистр" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="485" y="505" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kvKt-mwTTZmvSb9pK7DF-4" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;fillColor=#d80073;strokeColor=#A50040;" edge="1" parent="1" source="w7SvvbEXYDQ_G_9nUwTs-58" target="kvKt-mwTTZmvSb9pK7DF-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="563" y="620" as="sourcePoint" />
+            <mxPoint x="720" y="359" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kvKt-mwTTZmvSb9pK7DF-5" value="отправка в регистр" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="590" y="515" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kvKt-mwTTZmvSb9pK7DF-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="kvKt-mwTTZmvSb9pK7DF-6" target="w7SvvbEXYDQ_G_9nUwTs-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kvKt-mwTTZmvSb9pK7DF-6" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#1ba1e2;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kvKt-mwTTZmvSb9pK7DF-7" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Пенсионный фонд&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Загрузка льготников из файла пенсионного фонда&lt;/font&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="620" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="kvKt-mwTTZmvSb9pK7DF-9" value="" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=2;hachureGap=8;fillColor=#990000;fillStyle=dots;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kvKt-mwTTZmvSb9pK7DF-12" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Федеральный регистр ФРЛЛО&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Сотрудники МИАЦ выгружают файл со льготниками xml из РДС&lt;/font&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="260" width="260" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="kvKt-mwTTZmvSb9pK7DF-14" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Выгрузка льготников в федеральный регистр&lt;/font&gt;&lt;/h1&gt;&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;p style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;В таблице RR_patient добавляется/изменяется информация по льготникам- кодом. Вызывается&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;хранимая процедура&amp;nbsp;&lt;b&gt;sp_RR_Direction&lt;/b&gt;. Формируется xml, которая отправляется в очередь rabbit -&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;RDSSync&amp;nbsp;&lt;/b&gt;или при её отстствии-формируется наименование очереди из таблицы связанных серверов&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;T_SYNC_SERVERS,&amp;nbsp;&lt;/b&gt;где наименование сервера=наименованию очереди.&lt;/span&gt;&lt;/p&gt;&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="930" y="850" width="340" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="kvKt-mwTTZmvSb9pK7DF-16" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=0.883;exitY=0.04;exitDx=0;exitDy=0;exitPerimeter=0;fillColor=#d80073;strokeColor=#A50040;" edge="1" parent="1" source="kvKt-mwTTZmvSb9pK7DF-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="620" as="sourcePoint" />
+            <mxPoint x="720" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kvKt-mwTTZmvSb9pK7DF-18" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=0.883;exitY=0.04;exitDx=0;exitDy=0;exitPerimeter=0;fillColor=#d80073;strokeColor=#A50040;" edge="1" parent="1" target="kvKt-mwTTZmvSb9pK7DF-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="620" as="sourcePoint" />
+            <mxPoint x="720" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kvKt-mwTTZmvSb9pK7DF-19" value="отправка в регистр" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="490" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
